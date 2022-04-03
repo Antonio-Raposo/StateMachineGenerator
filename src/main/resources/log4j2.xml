@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <Properties>
+	    <Property name="pattern" value="%date{yyyy-MM-dd HH:mm:ss,SSS} %level [%thread] %message%n"/>
+	</Properties>
+	<appenders>
+		<Console name="Console" target="SYSTEM_ERR">
+			<ThresholdFilter level="all" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="${pattern}" />
+		</Console>
+	</appenders>
+	<loggers>
+		<root level="all">
+			<appender-ref ref="Console" />
+		</root>
+	</loggers>
+</configuration>
